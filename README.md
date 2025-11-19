@@ -8,8 +8,10 @@ bunx expo install expo-haptics
 bunx expo install @expo/ui
 bunx expo install react-native-mmkv
 bunx expo install react-native-nitro-modules
+bunx expo install react-native-reanimated
 bun install zustand
 bun add @tanstack/react-query
+bunx expo install expo-linear-gradient
 
 <!-- Prebuild for ios -->
 
