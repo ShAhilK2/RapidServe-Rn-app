@@ -12,6 +12,7 @@ import {
 } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
+import { Link } from "expo-router";
 import Animation, { FadeInDown } from "react-native-reanimated";
 export default function Index() {
   const openLink = () => {
@@ -59,9 +60,11 @@ export default function Index() {
           </Animation.View>
 
           <Animation.View entering={FadeInDown.delay(300)}>
-            <TouchableOpacity style={styles.otherButton}>
-              <Text style={styles.otherButtonText}>Other Options</Text>
-            </TouchableOpacity>
+            <Link href="/other-options" asChild>
+              <TouchableOpacity style={styles.otherButton}>
+                <Text style={styles.otherButtonText}>Other Options</Text>
+              </TouchableOpacity>
+            </Link>
           </Animation.View>
 
           <Animation.View entering={FadeInDown.delay(400)}>
