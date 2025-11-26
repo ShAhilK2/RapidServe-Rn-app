@@ -21,6 +21,10 @@ const RestaurantList = () => {
       </View>
     );
   }
+
+  if (error) {
+    return <Text style={styles.errorText}>Error fetching restaurants</Text>;
+  }
   return (
     <>
       {restaurants?.map((item, index) => {
@@ -94,6 +98,11 @@ const styles = StyleSheet.create({
   metaDataText: {
     fontSize: 13,
     color: "#666",
+  },
+  errorText: {
+    fontSize: 16,
+    color: "#666",
+    textAlign: "center",
   },
 });
 
